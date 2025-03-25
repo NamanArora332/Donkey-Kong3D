@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-    private Rigidbody rb;
+    public Rigidbody rb;
     public float speed = 2f;
     public float moveDirection;
     public float lifetime = 5f;
@@ -13,15 +13,22 @@ public class Fireball : MonoBehaviour
     public Ladder[] ladders;
     public int currentLadder=0;
 
+void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
         lifetime -= Time.deltaTime;
-        if (lifetime <= 0)
+        if(lifetime >0) {
+            MoveTowardsPlayer();
+            }
+        else
         {
             Destroy(gameObject);
         }
-        MoveTowardsPlayer();
+        
 
     }
     void MoveTowardsPlayer()
@@ -30,19 +37,19 @@ public class Fireball : MonoBehaviour
         
         if (Player.transform.position.y <= ladders[currentLadder].top.position.y)
         {
-            moveDirection = Player.transform.position.x - transform.position.x;
-            if (moveDirection < 0)
-            {
-                rb.AddForce(Vector3.left * speed * Time.deltaTime);
-            }
-            else
-            {
-                rb.AddForce(Vector3.right * speed * Time.deltaTime);
-            }
+            Debug.Log("Player is on same level as fireball");
+            // Determine movement direction (-1 for left, 1 for right)
+            float moveDirection = Mathf.Sign(ladders[currentLadder].top.position.x - transform.position.x);
+
+            // Set velocity to move only in the X direction
+            rb.linearVelocity = new Vector3(moveDirection * speed, rb.linearVelocity.y, rb.linearVelocity.z); 
+
+
 
         }
         else
         {
+            Debug.Log("Player is not on same level as fireball, climbing ladder");
             climbCurrentLadder();
         }
 
