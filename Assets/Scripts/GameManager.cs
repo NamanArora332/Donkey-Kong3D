@@ -70,6 +70,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     }
     public void RemoveLife()
     {
+        FindFirstObjectByType<CameraShake>().StartShake();
+
         maxLives--;
         UpdateHeartsUI();
         // game over UI if maxLives < 0, then exit to main menu after delay
