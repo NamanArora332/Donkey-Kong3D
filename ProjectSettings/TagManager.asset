@@ -10,6 +10,7 @@ TagManager:
   - GroundOne
   - SideWall
   - Mario
+  - FloorJumpPowerUp
   layers:
   - Default
   - TransparentFX

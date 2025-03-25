@@ -41,12 +41,14 @@ public class Barrel : MonoBehaviour
         {
             Vector3 marioScale = collision.transform.localScale;
 
-            if (marioScale.x == 1 || marioScale.y == 1 || marioScale.z == 1) // Checking if Mario has grown
+            if (GameManager.Instance.getMarioBig()) // Checking if Mario has grown
             {
-                GameManager.Instance.RemoveLife();
+                
+                Destroy(gameObject);
             }
             else{
-                Destroy(gameObject);
+                GameManager.Instance.RemoveLife();
+
             }
         }
 

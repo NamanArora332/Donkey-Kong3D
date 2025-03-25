@@ -29,7 +29,7 @@ public class Items : MonoBehaviour
                 {
                     playerRb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
                 }
-
+                GameManager.Instance.setMarioBig(true);
                 StartCoroutine(ScalePlayerOverTime(other.transform, playerRb, scaleDuration, playerScaleMultiplier, itemScaleMultiplier));
             }
         }
@@ -89,6 +89,7 @@ public class Items : MonoBehaviour
 
     player.localScale = originalScale; // Ensure it's exactly back to normal size
     // Debug.Log("Mario is back to normal size: " + player.localScale.ToString());
+    GameManager.Instance.setMarioBig(false);
 }
 
 }

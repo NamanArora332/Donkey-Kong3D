@@ -14,6 +14,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private float countdownTime = 90f; // Total countdown time in seconds
     [SerializeField] private TextMeshProUGUI timerText; // Reference to the UI text for the timer
     private float currentTime; // Tracks the current time left in the countdown
+
+    private bool isMarioBig=false;
     private void OnEnable()
     {
         //Update the array of hearts
@@ -22,6 +24,14 @@ public class GameManager : SingletonMonoBehavior<GameManager>
 
         currentTime = countdownTime;
         UpdateTimerUI(); //Updates timer text on the screen
+    }
+    public bool getMarioBig()
+    {
+        return isMarioBig;
+    }
+    public void setMarioBig(bool big)
+    {
+        isMarioBig = big;
     }
 
     private void Update()
