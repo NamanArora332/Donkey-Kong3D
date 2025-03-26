@@ -5,7 +5,7 @@ public class Fireball : MonoBehaviour
     public Rigidbody rb;
     public float speed = 2f;
     public float moveDirection;
-    public float lifetime = 5f;
+    public float lifetime = 35f;
     public int damage = 10;
     public GameObject explosionPrefab;
     public AudioClip explosionSound;
@@ -19,7 +19,7 @@ void Start()
     }
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
         lifetime -= Time.deltaTime;
         if(lifetime >0) {
             MoveTowardsPlayer();
@@ -59,11 +59,15 @@ void Start()
         // move towards ladders[currentladder]
         if (ladders[currentLadder].top.position.x - transform.position.x < 0)
         {
-            rb.AddForce(Vector3.left * speed * Time.deltaTime);
+            // rb.AddForce(Vector3.left * speed * Time.deltaTime);
+            float direction = Mathf.Sign(ladders[currentLadder].bottom.position.x - transform.position.x);
+            rb.linearVelocity = new Vector3(direction * speed, rb.linearVelocity.y, rb.linearVelocity.z);
         }
         else
         {
-            rb.AddForce(Vector3.right * speed * Time.deltaTime);
+            // rb.AddForce(Vector3.right * speed * Time.deltaTime);
+            climbUpLadder(ladders[currentLadder]);
+            currentLadder = (currentLadder + 1) % ladders.Length;
         }
     }
 
@@ -78,7 +82,7 @@ void Start()
             if(ladders[currentLadder].top.position.y !=collision.gameObject.transform.position.y)
             {
                 Debug.Log("Can climb up this ladder");
-                climbUpLadder(ladders[currentLadder++]);
+                climbUpLadder(ladders[currentLadder]);
             }
             else
             {
