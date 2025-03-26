@@ -6,14 +6,6 @@ public class Coins : MonoBehaviour
     public float speed;
     public int scoreValue = 10;
     public UnityEvent OnCoinCollected = new UnityEvent();
-    // void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.gameObject.CompareTag("Mario"))
-    //     {
-    //         OnCoinCollected.Invoke();
-    //         Destroy(gameObject);
-    //     }
-    // }
     
     void Update()
     {
@@ -26,6 +18,7 @@ public class Coins : MonoBehaviour
         if (other.gameObject.CompareTag("Mario"))
         {
             OnCoinCollected.Invoke();
+            GameManager.Instance.AddScore();
             Destroy(gameObject);
         }
     }

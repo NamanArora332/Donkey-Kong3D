@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using JetBrains.Annotations;
 
 public class GameManager : SingletonMonoBehavior<GameManager>
 {
     [SerializeField] private int maxLives = 3;
     [SerializeField] private GameObject[] hearts;
     [SerializeField] private TextMeshProUGUI gameOver;
+    public TextMeshProUGUI scoreText; // Text for updating coin count
+    private int score = 0;
 
     [SerializeField] private PlayerController mario; //referring to the mario character
     [SerializeField] private Barrel barrel;
@@ -16,6 +19,24 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     private float currentTime; // Tracks the current time left in the countdown
 
     private bool isMarioBig=false;
+    private bool isImmune=false; //Track whether Mario is immune to the barrels
+
+    void Start()
+    {
+        UpdateScoreUI();
+    }
+
+    void UpdateScoreUI(){
+        if(scoreText!=null){
+            scoreText.text=""+score;
+        }
+    }
+
+    public void AddScore(){
+        score++;
+        UpdateScoreUI();
+    }
+
     private void OnEnable()
     {
         //Update the array of hearts
@@ -70,6 +91,9 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     }
     public void RemoveLife()
     {
+        if(isImmune){
+            return; //don't do anything when he is immune
+        }
         maxLives--;
         UpdateHeartsUI();
         // game over UI if maxLives < 0, then exit to main menu after delay
@@ -80,7 +104,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         }
         else
         {
-            mario.ResetPosition();
+            StartCoroutine(ResetWithImmunity());
+            // mario.ResetPosition();
         }
 
 
@@ -92,6 +117,16 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         {
             hearts[i].SetActive(i < maxLives);
         }
+    }
+
+    private IEnumerator ResetWithImmunity(){
+        isImmune=true; //set immune to true
+        mario.EnableImmunityEffect();
+        mario.ResetPosition(); //reset his position
+
+        yield return new WaitForSeconds(3f); //wait 3 second for immunity;
+        isImmune=false;
+        mario.DisableImmunityEffect();
     }
 
     private IEnumerator GameOverSequence()

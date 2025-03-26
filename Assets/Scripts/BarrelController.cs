@@ -16,7 +16,10 @@ public class DonkeyKongController : MonoBehaviour
     public bool equipped;
     public static bool slotFull;
 
-    private float timeBetweenActions = 3f; //time delay between picking up and throwing barrel
+    //Time delay range for picking and throwing barrels
+    public float minTimeBetweenActions = 2f;
+    public float maxTimeBetweenActions = 5f;
+    private float timeBetweenActions; // randomised time delay between picking up and throwing barrel
     private bool canPerformAction = true; //flag to control timing logic
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +37,8 @@ public class DonkeyKongController : MonoBehaviour
             rb.isKinematic = true;
             coll.isTrigger = true;
         }
+        // Initialize the randomized time delay
+        timeBetweenActions = GetRandomTime();
     }
 
     // Update is called once per frame
@@ -97,6 +102,9 @@ public class DonkeyKongController : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenActions);
         InstantiateNewBarrel();
         canPerformAction = true;
+
+        // Randomize the time delay for the next action
+        timeBetweenActions = GetRandomTime();
     }
 
     private void InstantiateNewBarrel()
@@ -113,6 +121,12 @@ public class DonkeyKongController : MonoBehaviour
             newBarrelController.barrelPrefab = barrelPrefab;
             newBarrelController.spawnPoint = spawnPoint;
         }
+    }
+
+    // Method to generate a random time delay within the specified range
+    private float GetRandomTime()
+    {
+        return Random.Range(minTimeBetweenActions, maxTimeBetweenActions);
     }
 
 }
