@@ -5,7 +5,7 @@ public class Fireball : MonoBehaviour
     public Rigidbody rb;
     public float speed = 2f;
     public float moveDirection;
-    public float lifetime = 35f;
+    public float lifetime = 5f;
     public int damage = 10;
     public GameObject explosionPrefab;
     public AudioClip explosionSound;
@@ -19,7 +19,7 @@ void Start()
     }
     void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        // transform.Translate(Vector3.right * speed * Time.deltaTime); //commented out because it gives fireball jumpy motion
         lifetime -= Time.deltaTime;
         if(lifetime >0) {
             MoveTowardsPlayer();
@@ -59,9 +59,10 @@ void Start()
         // move towards ladders[currentladder]
         if (ladders[currentLadder].top.position.x - transform.position.x < 0)
         {
-            // rb.AddForce(Vector3.left * speed * Time.deltaTime);
+            // rb.AddForce(Vector3.left * speed * Time.deltaTime); //commented out because the movement on the ground wasn't really moving in the left/right direction
             float direction = Mathf.Sign(ladders[currentLadder].bottom.position.x - transform.position.x);
             rb.linearVelocity = new Vector3(direction * speed, rb.linearVelocity.y, rb.linearVelocity.z);
+            
         }
         else
         {
@@ -71,7 +72,7 @@ void Start()
         }
     }
 
-    void OnCollisionEnter(Collision collision){
+    void OnTriggerEnter(Collider collision){ //changed to OnTriggerEnter because ladder uses isTrigger in its collider
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player hit by fireball!");
@@ -91,6 +92,7 @@ void Start()
         }
 
     }
+    
     void climbUpLadder(Ladder ladder)
     {
         Debug.Log("Climbing up ladder");
