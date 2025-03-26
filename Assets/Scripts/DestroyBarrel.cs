@@ -10,7 +10,14 @@ public class DestroyBarrel : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("Mario")){
+            
             GameManager.Instance.RemoveLife();
+
+            Rigidbody barrelRb = collision.GetComponent<Rigidbody>();
+            if (barrelRb != null)
+            {
+                barrelRb.linearVelocity = barrelRb.linearVelocity.normalized * barrelRb.linearVelocity.magnitude;
+            }
         }
     }
 }
