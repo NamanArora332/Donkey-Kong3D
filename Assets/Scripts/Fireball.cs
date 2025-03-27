@@ -12,6 +12,7 @@ public class Fireball : MonoBehaviour
     public GameObject Player;
     public Ladder[] ladders;
     public int currentLadder = 0;
+    private bool isClimbing =false;
 
     void Start()
     {
@@ -38,7 +39,6 @@ public class Fireball : MonoBehaviour
 
         if (Player.transform.position.y <= ladders[currentLadder].top.position.y)
         {
-            Debug.Log("Player is on same level as fireball");
             // Determine movement direction (-1 for left, 1 for right)
             float moveDirection = Mathf.Sign(Player.transform.position.x - transform.position.x);
 
@@ -47,7 +47,6 @@ public class Fireball : MonoBehaviour
         }
         else
         {
-            Debug.Log("Player is not on same level as fireball, climbing ladder");
             climbCurrentLadder();
         }
 
@@ -75,17 +74,13 @@ public class Fireball : MonoBehaviour
     void OnTriggerEnter(Collider collision)
     { //changed to OnTriggerEnter because ladder uses isTrigger in its collider
 
-        if (collision.gameObject.CompareTag("Ladder"))
+        if (collision.gameObject.CompareTag("Ladder") && !isClimbing)
         {
-            Debug.Log("Fireball appraoched ladder");
             if (ladders[currentLadder].top.position.y != collision.gameObject.transform.position.y)
             {
-                Debug.Log("Can climb up this ladder");
+                isClimbing=true;
                 climbUpLadder(ladders[currentLadder]);
-            }
-            else
-            {
-                Debug.Log("Cannot climb up this ladder");
+                Invoke("ResetClimbingState", 0.5f);
             }
         }
 
@@ -94,8 +89,6 @@ public class Fireball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Mario"))
         {
-            Debug.Log("Player hit by fireball!");
-
             GameManager.Instance.RemoveLife();
             Destroy(gameObject);
         }
@@ -103,9 +96,12 @@ public class Fireball : MonoBehaviour
 
     void climbUpLadder(Ladder ladder)
     {
-        Debug.Log("Climbing up ladder");
         rb.isKinematic = true;
         this.transform.position = ladder.top.position;
         rb.isKinematic = false;
+    }
+
+    void ResetClimbingState(){
+        isClimbing=false;
     }
 }

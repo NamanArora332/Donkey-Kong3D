@@ -14,7 +14,6 @@ public class Coins : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger");
         if (other.gameObject.CompareTag("Mario"))
         {
             OnCoinCollected.Invoke();
