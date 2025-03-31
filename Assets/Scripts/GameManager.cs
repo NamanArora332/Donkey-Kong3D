@@ -1,12 +1,18 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using JetBrains.Annotations;
 
 public class GameManager : SingletonMonoBehavior<GameManager>
 {
     [SerializeField] private int maxLives = 3;
     [SerializeField] private GameObject[] hearts;
     [SerializeField] private TextMeshProUGUI gameOver;
+    public TextMeshProUGUI scoreText; // Text for updating coin count
+    private int score = 0;
 
     [SerializeField] private PlayerController mario; //referring to the mario character
     [SerializeField] private Barrel barrel;
@@ -14,8 +20,47 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private float countdownTime = 90f; // Total countdown time in seconds
     [SerializeField] private TextMeshProUGUI timerText; // Reference to the UI text for the timer
     private float currentTime; // Tracks the current time left in the countdown
+    private bool isTimerPaused = false;
 
-    private bool isMarioBig=false;
+    private bool isMarioBig = false;
+    private bool isImmune = false; //Track whether Mario is immune to the barrels
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private GameObject settingsMenu;
+    private bool isSettingsMenuActive;
+    public bool IsSettingsMenuActive => isSettingsMenuActive;
+
+    private bool isGameOver = false; // Flag to track if the game over sequence has started
+
+    protected override void Awake()
+    {
+        base.Awake();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        inputManager.OnSettingsMenu.AddListener(ToggleSettingsMenu);
+        // the game starts with the settings menu disabled
+        DisableSettingsMenu();
+    }
+
+
+    void Start()
+    {
+        UpdateScoreUI();
+    }
+
+    void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "" + score;
+        }
+    }
+
+    public void AddScore()
+    {
+        score++;
+        UpdateScoreUI();
+    }
+
     private void OnEnable()
     {
         //Update the array of hearts
@@ -36,12 +81,14 @@ public class GameManager : SingletonMonoBehavior<GameManager>
 
     private void Update()
     {
-        if (currentTime > 0)
+        // Countdown timer logic
+        if (!isSettingsMenuActive && !isTimerPaused && currentTime > 0)
         {
             currentTime -= Time.deltaTime;
             UpdateTimerUI();
         }
-        if (currentTime <= 0)
+
+        if (currentTime <= 0 && !isSettingsMenuActive)
         {
             currentTime = 0;
             OnCountdownEnd();
@@ -66,26 +113,37 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     }
     private void OnCountdownEnd()
     {
-        StartCoroutine(GameOverSequence());
+        if (!isGameOver)
+        {
+            StartCoroutine(GameOverSequence());
+        }
     }
     public void RemoveLife()
     {
-        FindFirstObjectByType<CameraShake>().StartShake();
+        
+        if (isImmune)
+        {
+            return; // Don't do anything when Mario is immune
+        }
+        if (AudioManager.instance != null && maxLives != 1)
+        {
+            AudioManager.instance.sfxSource.PlayOneShot(AudioManager.instance.loseLifeClip);
+            AudioManager.instance.sfxSource.PlayOneShot(AudioManager.instance.kongClip);
+        }
 
         maxLives--;
+        FindFirstObjectByType<CameraShake>().StartShake();
         UpdateHeartsUI();
-        // game over UI if maxLives < 0, then exit to main menu after delay
-        if (maxLives <= 0)
+
+        // Start Game Over sequence if lives are 0
+        if (maxLives <= 0 && !isGameOver)
         {
-            // Show Game Over text and return to the main menu after a delay
             StartCoroutine(GameOverSequence());
         }
         else
         {
-            mario.ResetPosition();
+            StartCoroutine(ResetWithImmunity());
         }
-
-
     }
     private void UpdateHeartsUI()
     {
@@ -96,9 +154,30 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         }
     }
 
+    private IEnumerator ResetWithImmunity()
+    {
+        isImmune = true; //set immune to true
+        mario.EnableImmunityEffect();
+        mario.ResetPosition(); //reset his position
+
+        yield return new WaitForSeconds(3f); //wait 3 second for immunity;
+        isImmune = false;
+        mario.DisableImmunityEffect();
+    }
+
     private IEnumerator GameOverSequence()
     {
-        Time.timeScale = 0f; //freezing the time
+        if (isGameOver) yield break; // Prevent multiple calls
+        isGameOver = true; // Set the flag to true
+        PauseTimer();
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.ambienceSource.Stop();
+            AudioManager.instance.PlaySound(AudioManager.instance.gameOverClip);
+        }
+
+        Time.timeScale = 0f; // Freeze the time
 
         // Show the Game Over UI
         gameOver.gameObject.SetActive(true);
@@ -112,5 +191,57 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // Handle Next Scene
         Debug.Log("Back to Main Menu");
         // SceneHandler.Instance.LoadMenuScene();
+
+        // TODO: Back to main menu
+        yield return new WaitForSeconds(3f);
+        QuitGame();
     }
+
+    private void ToggleSettingsMenu()
+    {
+        if (isSettingsMenuActive)
+        {
+            AudioManager.instance.ambienceSource.Play();
+            DisableSettingsMenu();
+        }
+        else EnableSettingsMenu();
+    }
+    private void EnableSettingsMenu()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.ambienceSource.Stop();
+            AudioManager.instance.sfxSource.PlayOneShot(AudioManager.instance.pauseClip);
+        }
+        Time.timeScale = 0f;
+        settingsMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        isSettingsMenuActive = true;
+    }
+
+    public void DisableSettingsMenu()
+    {
+        Time.timeScale = 1f;
+        settingsMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        isSettingsMenuActive = false;
+    }
+
+    public void PauseTimer()
+    {
+        isTimerPaused = true; // Pause the timer
+    }
+
+    public void QuitGame()
+    {
+# if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+# else
+        Application.Quit();
+# endif
+    }
+
+
 }

@@ -1,0 +1,18 @@
+lambert3
+========
+  Textures:
+    - BlockMiniPanda
+
+  Ambient Colors:
+    - 128, 128, 128, 128
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Color Registers:
+    - 24, 16, 8, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB)), then add (24, 16, 8)
+         A = ((tex #1 A) * (vertex A))

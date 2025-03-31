@@ -1,0 +1,39 @@
+lambert17_v
+===========
+  Textures:
+    - t_birdwall
+
+  Ambient Colors:
+    - 128, 128, 128, 128
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Color Registers:
+    - -60, -60, -60, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB)), then add (-60, -60, -60)
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v
+==========
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 128, 128, 128, 128
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Color Registers:
+    - -60, -60, -60, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB)), then add (-60, -60, -60)
+         A = ((tex #1 A) * (vertex A))

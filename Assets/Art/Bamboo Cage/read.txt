@@ -1,0 +1,4 @@
+Hi there the LBP 3 alpha port project is not completely perfect as for some reason my
+obj change the way I save them so here how to fix the models. The only thing you need to do is 
+to check the normal map and spec textures are set to non color. That's all really if you plan 
+make a mod from the models the only thing I ask is you to credit me that's all goodbye.

@@ -1,0 +1,67 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Common/Textures/T_princessSkin_D.T_princessSkin_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Common/Textures/T_princessSkin_D.T_princessSkin_D",
+    "BurnTextureSample": "PJ037/Content/Assets/Characters/Common/Textures/Tt_princessSkin_Burned.Tt_princessSkin_Burned",
+    "Tt_princessSkin_Burned": "PJ037/Content/Assets/Characters/Common/Textures/Tt_princessSkin_Burned.Tt_princessSkin_Burned",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Common/Textures/T_princessSkin_D.T_princessSkin_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Common/Textures/T_princessSkin_D.T_princessSkin_D",
+    "FakeLighting_GradientMap": "PJ037/Content/Assets/Characters/Common/Curves/FakeLighting/CA_FakeLightingColor_CommonA.CA_FakeLightingColor_CommonA",
+    "CA_FakeLightingColor_CommonA": "PJ037/Content/Assets/Characters/Common/Curves/FakeLighting/CA_FakeLightingColor_CommonA.CA_FakeLightingColor_CommonA",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_skin_S.T_PLcowgirl_skin_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_skin_S.T_PLcowgirl_skin_S",
+    "T_PLcowgirl_skin_S": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_skin_S.T_PLcowgirl_skin_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Common/Textures/T_princessSkin_N.T_princessSkin_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Common/Textures/T_princessSkin_N.T_princessSkin_N"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 5,
+    "Colors": {
+      "OcclusionColor": {
+        "R": 0.478431,
+        "G": 0.239216,
+        "B": 0.192157,
+        "A": 1.0,
+        "Hex": "FFB88679"
+      }
+    },
+    "Scalars": {
+      "CoalSample_Tiling": 2.0,
+      "DamageBurn_Idle_Switch": 0.0,
+      "DamageBurn_Out_Switch": 0.0,
+      "ThunderFlashSwitch": 0.0,
+      "OpasityRange": 1.0,
+      "Tiling_U": 4.0,
+      "Tiling_V": 4.0,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "DitherMask": true,
+      "Is_BaseColorFresnel": true,
+      "Is_DamageBurn": true,
+      "Is_FakeBackLighting": true,
+      "Is_FakeBackLightingUseMask": false,
+      "Is_ThunderFlash": true,
+      "Is_Tiling": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "ShadingModel": "MSM_SubsurfaceProfile",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'T_PL_FCEnormal_SubProfile00'",
+        "ObjectPath": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_SubProfile00.0"
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

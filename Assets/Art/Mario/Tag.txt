@@ -1,0 +1,6 @@
+Game: Mario Tennis: Ultra Smash
+Subject: Mario
+Copyright: Nintendo, Camelot
+Model Ripper: Random Talking Bush
+Hosting Permissions: The Models Resource
+Notes: Special thanks to ItsEasyActually for the model importing script.

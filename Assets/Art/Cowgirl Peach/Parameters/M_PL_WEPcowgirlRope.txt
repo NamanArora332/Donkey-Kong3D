@@ -1,0 +1,67 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "MatCapByMetal_Sample": "PJ037/Content/Assets/StandardAssets/Samples/MatCaps/MC_Mario_Gold.MC_Mario_Gold",
+    "MC_Mario_Gold": "PJ037/Content/Assets/StandardAssets/Samples/MatCaps/MC_Mario_Gold.MC_Mario_Gold",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "T_PL_WEPcowgirlRope_S": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_N.T_PL_WEPcowgirlRope_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_N.T_PL_WEPcowgirlRope_N"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 0,
+    "Colors": {
+      "EmissiveColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      }
+    },
+    "Scalars": {
+      "Noise_Scale": 20.0,
+      "Step_Time": 0.0,
+      "DissolveBoundingBoxScale": 0.9,
+      "Emissive_Intensity": 0.2,
+      "Hemisphere_Intensity": 0.2,
+      "HalfFresnelA_Falloff": 0.3,
+      "HalfFresnelA_Intensity": 2.0,
+      "HalfFresnelB_Intensity": 2.0,
+      "MatCapIntensity": 0.03,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "Is_ColoredSpecular": false,
+      "Is_EnemyDissolve": true,
+      "Is_FakeBackLighting": true,
+      "Is_FakeBackLightingUseMask": true,
+      "Is_FakeLighting": true,
+      "Is_FakeLightingHalfFresnel": true,
+      "Is_FakeLightingHemisphere": true,
+      "Is_FakeSpecular": true,
+      "Is_HalfFresnel_PixelNormal": true,
+      "Is_Hemisphere_PixelNormal": true,
+      "Is_RoughnessMapForMetallic": true,
+      "Is_SpecularMask": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

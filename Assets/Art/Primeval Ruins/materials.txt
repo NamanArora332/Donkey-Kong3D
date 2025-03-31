@@ -1,0 +1,606 @@
+RayMat_v_x
+==========
+  Textures:
+    - BxWoodRay
+        Offset: 0.055735472589731216, 0
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert12_v
+===========
+  Textures:
+    - t_poleita
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert15_v
+===========
+  Textures:
+    - t_ceil
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert18_v
+===========
+  Textures:
+    - t_lantan
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert20_v
+===========
+  Textures:
+    - t_neji
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert21_v
+===========
+  Textures:
+    - t_bluehasira02
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert3_v
+==========
+  Textures:
+    - t_tiles
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert41_v
+===========
+  Textures:
+    - t_gake
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert42_v
+===========
+  Textures:
+    - BxWoodWoodSkin
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert44_v
+===========
+  Textures:
+    - r_cliff
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert59_v
+===========
+  Textures:
+    - r_turuleaf
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert7_v
+==========
+  Textures:
+    - t_snakewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert8_v
+==========
+  Textures:
+    - t_greenhasira
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v
+==========
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(2)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(3)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(4)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(5)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert3_v(2)
+=============
+  Textures:
+    - t_tiles
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(6)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert12_v(2)
+==============
+  Textures:
+    - t_poleita
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert15_v(2)
+==============
+  Textures:
+    - t_ceil
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert3_v(3)
+=============
+  Textures:
+    - t_tiles
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert41_v(2)
+==============
+  Textures:
+    - t_gake
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert44_v(2)
+==============
+  Textures:
+    - r_cliff
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert8_v(2)
+=============
+  Textures:
+    - t_greenhasira
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(7)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(8)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(9)
+=============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(10)
+==============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(11)
+==============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 70, 91, 78, 255
+    - 70, 91, 78, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert9_v(12)
+==============
+  Textures:
+    - t_templewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 118, 126, 115, 255
+    - 118, 126, 115, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert15_v(3)
+==============
+  Textures:
+    - t_ceil
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
+
+
+
+lambert7_v(2)
+=============
+  Textures:
+    - t_snakewall
+
+  Ambient Colors:
+    - 50, 50, 50, 50
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))

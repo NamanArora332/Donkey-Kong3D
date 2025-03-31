@@ -43,12 +43,15 @@ public class Barrel : MonoBehaviour
 
             if (GameManager.Instance.getMarioBig()) // Checking if Mario has grown
             {
-                
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.sfxSource.PlayOneShot(AudioManager.instance.fightOffClip); // Play fightOffClip without stopping bigMarioClip
+                }
                 Destroy(gameObject);
             }
-            else{
+            else
+            {
                 GameManager.Instance.RemoveLife();
-
             }
         }
 

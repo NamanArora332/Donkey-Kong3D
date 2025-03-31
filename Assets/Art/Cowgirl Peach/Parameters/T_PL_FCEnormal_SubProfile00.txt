@@ -1,0 +1,28 @@
+[
+  {
+    "Type": "SubsurfaceProfile",
+    "Name": "T_PL_FCEnormal_SubProfile00",
+    "Class": "UScriptClass'SubsurfaceProfile'",
+    "Properties": {
+      "Settings": {
+        "ScatterRadius": 6.0,
+        "SubsurfaceColor": {
+          "R": 0.755208,
+          "G": 0.229994,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FFE28400"
+        },
+        "FalloffColor": {
+          "R": 0.713542,
+          "G": 0.144638,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FFDC6A00"
+        },
+        "Roughness0": 2.0,
+        "Roughness1": 0.8
+      }
+    }
+  }
+]

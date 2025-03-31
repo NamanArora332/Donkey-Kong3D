@@ -1,0 +1,57 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_D.T_PLcowgirl_gloves_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_D.T_PLcowgirl_gloves_D",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_D.T_PLcowgirl_gloves_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_D.T_PLcowgirl_gloves_D",
+    "MaskSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_M.T_PLcowgirl_gloves_M",
+    "T_PLcowgirl_gloves_M": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_M.T_PLcowgirl_gloves_M",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_S.T_PLcowgirl_gloves_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_S.T_PLcowgirl_gloves_S",
+    "T_PLcowgirl_gloves_S": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_S.T_PLcowgirl_gloves_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_N.T_PLcowgirl_gloves_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PLcowgirl_gloves_N.T_PLcowgirl_gloves_N"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 0,
+    "Colors": {
+      "EmissiveColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      }
+    },
+    "Scalars": {
+      "Emissive_Intensity": 0.2,
+      "MatCapIntensity": 0.0,
+      "Roughness": 1.0,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "Is_DamageGray": true,
+      "Is_FakeBackLighting": true,
+      "Is_FakeBackLightingUseMask": true,
+      "Is_FakeLighting": true,
+      "Is_FakeLightingHalfFresnel": true,
+      "Is_FakeLightingHemisphere": true,
+      "Is_FakeSpecular": true,
+      "Is_SpecularMask": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_D.T_PL_FCEnormal_skin_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_D.T_PL_FCEnormal_skin_D",
+    "BurnTextureSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_Burned.T_PL_FCEnormal_skin_Burned",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Skin_M.T_PL_FCEnormal_skin_M",
+    "T_PL_FCEnormal_skin_Burned": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_Burned.T_PL_FCEnormal_skin_Burned",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_D.T_PL_FCEnormal_skin_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_D.T_PL_FCEnormal_skin_D",
+    "FakeLighting_GradientMap": "PJ037/Content/Assets/Characters/Common/Curves/FakeLighting/CA_FakeLightingColor_CommonA.CA_FakeLightingColor_CommonA",
+    "CA_FakeLightingColor_CommonA": "PJ037/Content/Assets/Characters/Common/Curves/FakeLighting/CA_FakeLightingColor_CommonA.CA_FakeLightingColor_CommonA",
+    "MaskSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Skin_M.T_PL_FCEnormal_skin_M",
+    "T_PL_FCEnormal_skin_M": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Skin_M.T_PL_FCEnormal_skin_M",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_S.T_PL_FCEnormal_skin_S",
+    "T_PL_FCEnormal_skin_S": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skin_S.T_PL_FCEnormal_skin_S",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_skinNew_N.T_PL_FCEnormal_skinNew_N",
+    "ReflectionMap": "PJ037/Content/Assets/StandardAssets/Samples/HDRI/hdrmaps_blueSky3.hdrmaps_blueSky3",
+    "PM_SpecularMasks": "PJ037/Content/Assets/StandardAssets/Samples/HDRI/hdrmaps_blueSky3.hdrmaps_blueSky3",
+    "hdrmaps_blueSky3": "PJ037/Content/Assets/StandardAssets/Samples/HDRI/hdrmaps_blueSky3.hdrmaps_blueSky3",
+    "subsurfaceMask": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Skin_M.T_PL_FCEnormal_skin_M"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 5,
+    "Colors": {
+      "OcclusionColor": {
+        "R": 0.661458,
+        "G": 0.420302,
+        "B": 0.420302,
+        "A": 1.0,
+        "Hex": "FFD5AEAE"
+      },
+      "LipHighLight_Color": {
+        "R": 1.0,
+        "G": 0.291667,
+        "B": 0.375781,
+        "A": 1.0,
+        "Hex": "FFFF93A5"
+      },
+      "Reflection Color": {
+        "R": 1.0,
+        "G": 0.558341,
+        "B": 0.496933,
+        "A": 1.0,
+        "Hex": "FFFFC5BB"
+      }
+    },
+    "Scalars": {
+      "DamageBurn_Idle_Switch": 0.0,
+      "DamageBurn_Out_Switch": 0.0,
+      "fadeLength": 1000.0,
+      "FakeBackLighting_Intensity": 0.8,
+      "Hemisphere_AtlasRow": 0.0,
+      "Hemisphere_Intensity": 0.1,
+      "HalfFresnelA_Intensity": 0.5,
+      "HalfFresnelB_Intensity": 0.8,
+      "ThunderFlashSwitch": 0.0,
+      "LipDepthPower": 1.0,
+      "LipHighLight_Intensity_Far": 1.0,
+      "LipHighLight_Intensity_Near": 0.2,
+      "Normalmap_Intensity": 0.0,
+      "Rotation": 0.13,
+      "Intensity": 0.15,
+      "Contrast": 0.2,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "DitherMask": true,
+      "Is_BaseColorFresnel": true,
+      "Is_DamageBurn": true,
+      "Is_FakeBackLighting": true,
+      "Is_FakeBackLightingUseMask": true,
+      "Is_Reflect": true,
+      "Is_ReflectionColorSample": false,
+      "Is_ThunderFlash": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "ShadingModel": "MSM_SubsurfaceProfile",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'T_PL_FCEnormal_SubProfile00'",
+        "ObjectPath": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_SubProfile00.0"
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

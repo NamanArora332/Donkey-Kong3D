@@ -11,6 +11,7 @@ TagManager:
   - SideWall
   - Mario
   - FloorJumpPowerUp
+  - Peach
   layers:
   - Default
   - TransparentFX

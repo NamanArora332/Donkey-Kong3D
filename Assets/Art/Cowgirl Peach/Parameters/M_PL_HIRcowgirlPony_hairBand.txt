@@ -1,0 +1,40 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_D.T_PL_HIRcowgirlPony_hairBand_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_D.T_PL_HIRcowgirlPony_hairBand_D",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_S.T_PL_HIRcowgirlPony_hairBand_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_S.T_PL_HIRcowgirlPony_hairBand_S",
+    "T_PL_HIRcowgirlPony_hairBand_S": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_S.T_PL_HIRcowgirlPony_hairBand_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_N.T_PL_HIRcowgirlPony_hairBand_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_hairBand_N.T_PL_HIRcowgirlPony_hairBand_N"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 0,
+    "Colors": {},
+    "Scalars": {
+      "Roughness": 2.0,
+      "Normalmap_Intensity": 0.5,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "Is_FakeLighting": true,
+      "Is_FakeLightingHalfFresnel": true,
+      "Is_FakeLightingHemisphere": true,
+      "Is_FakeSpecular": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

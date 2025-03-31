@@ -1,0 +1,32 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "T_PL_WEPcowgirlRope_S": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_N.T_PL_WEPcowgirlRope_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_N.T_PL_WEPcowgirlRope_N"
+  },
+  "Parameters": {
+    "BlendMode": 0,
+    "ShadingModel": 0,
+    "Colors": {},
+    "Scalars": {
+      "Normalmap_Intensity": 1.5,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {},
+    "Properties": {
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

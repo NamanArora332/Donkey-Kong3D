@@ -16,9 +16,12 @@ public class DonkeyKongController : MonoBehaviour
     public bool equipped;
     public static bool slotFull;
 
-    private float timeBetweenActions = 3f; //time delay between picking up and throwing barrel
+    //Time delay range for picking and throwing barrels
+    public float minTimeBetweenActions = 2f;
+    public float maxTimeBetweenActions = 5f;
+    private float timeBetweenActions; // randomised time delay between picking up and throwing barrel
     private bool canPerformAction = true; //flag to control timing logic
-
+    [SerializeField] private Animator animator; //calling the animations for Donkey Kong
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +37,8 @@ public class DonkeyKongController : MonoBehaviour
             rb.isKinematic = true;
             coll.isTrigger = true;
         }
+        // Initialize the randomized time delay
+        timeBetweenActions = GetRandomTime();
     }
 
     // Update is called once per frame
@@ -78,6 +83,7 @@ public class DonkeyKongController : MonoBehaviour
     }
     private void Drop()
     {
+        animator.ResetTrigger("isPickingUp");
         equipped = false;
         slotFull = false;
 
@@ -93,14 +99,19 @@ public class DonkeyKongController : MonoBehaviour
 
     private IEnumerator PerformActionAfterDelay()
     {
+        animator.SetTrigger("isPickingUp");
         canPerformAction = false;
         yield return new WaitForSeconds(timeBetweenActions);
         InstantiateNewBarrel();
         canPerformAction = true;
+
+        // Randomize the time delay for the next action
+        timeBetweenActions = GetRandomTime();
     }
 
     private void InstantiateNewBarrel()
     {
+        
         // Create a new barrel instance at the spawn point
         GameObject newBarrel = Instantiate(barrelPrefab, spawnPoint.position, spawnPoint.rotation);
 
@@ -112,7 +123,14 @@ public class DonkeyKongController : MonoBehaviour
             newBarrelController.barrelContainer = barrelContainer;
             newBarrelController.barrelPrefab = barrelPrefab;
             newBarrelController.spawnPoint = spawnPoint;
+            newBarrelController.animator=animator;
         }
+    }
+
+    // Method to generate a random time delay within the specified range
+    private float GetRandomTime()
+    {
+        return Random.Range(minTimeBetweenActions, maxTimeBetweenActions);
     }
 
 }

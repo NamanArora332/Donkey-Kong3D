@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
     // Singleton pattern to ensure only one InputManager exists
     public static InputManager Instance { get; private set; }
+    public UnityEvent OnSettingsMenu = new();
 
     void Awake()
     {
@@ -17,6 +19,15 @@ public class InputManager : MonoBehaviour
         {
             Destroy(gameObject); // Destroy duplicates
         }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            {
+                // Debug.Log("Settings menu key pressed");
+                OnSettingsMenu?.Invoke();
+            }
     }
 
     // Methods to check input states
@@ -44,4 +55,10 @@ public class InputManager : MonoBehaviour
     {
         return Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
     }
+
+    public bool GetPausePressed()
+    {
+        return Input.GetKeyDown(KeyCode.P);
+    }
+
 }

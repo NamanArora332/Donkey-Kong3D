@@ -1,0 +1,53 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_D.T_PL_WEPcowgirlRope_D",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "T_PL_WEPcowgirlRope_S": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_S.T_PL_WEPcowgirlRope_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_N.T_PL_WEPcowgirlRope_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PL_WEP/PL_WEPcowgirlRope/Textures/T_PL_WEPcowgirlRope_N.T_PL_WEPcowgirlRope_N"
+  },
+  "Parameters": {
+    "BlendMode": 0,
+    "ShadingModel": 0,
+    "Colors": {
+      "EmissiveColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      }
+    },
+    "Scalars": {
+      "Emissive_Intensity": 0.2,
+      "ScaleVectorAmount": 200.0,
+      "ScaleVectorProgress": 0.0,
+      "Normalmap_Intensity": 1.5,
+      "MaxLength": 1000.0,
+      "NaturalLength": 1000.0,
+      "Shoot_PositionOffset": 1.0,
+      "Shoot_Width": 100.0,
+      "Shoot_WireCurve": 2.0,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "Is_SyncShootToScale": false
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

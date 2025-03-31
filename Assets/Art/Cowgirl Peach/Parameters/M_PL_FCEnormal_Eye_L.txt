@@ -1,0 +1,119 @@
+{
+  "Textures": {
+    "MaskedSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_M.T_PL_FCEnormal_Eye_M",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_M.T_PL_FCEnormal_Eye_M",
+    "T_PL_FCEnormal_Eye_M": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_M.T_PL_FCEnormal_Eye_M",
+    "BottomSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_D.T_PL_FCEnormal_Eye_D",
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_D.T_PL_FCEnormal_Eye_D",
+    "T_PL_FCEnormal_Eye_D": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_D.T_PL_FCEnormal_Eye_D",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_D.T_PL_FCEnormal_Eye_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Player/PL_FCE/PL_FCEnormal/Textures/T_PL_FCEnormal_Eye_D.T_PL_FCEnormal_Eye_D",
+    "ReflectionMap": "PJ037/Content/Assets/StandardAssets/Samples/HDRI/hdrmaps_FirstMeetingRoom.hdrmaps_FirstMeetingRoom",
+    "PM_SpecularMasks": "PJ037/Content/Assets/StandardAssets/Samples/HDRI/hdrmaps_FirstMeetingRoom.hdrmaps_FirstMeetingRoom",
+    "hdrmaps_FirstMeetingRoom": "PJ037/Content/Assets/StandardAssets/Samples/HDRI/hdrmaps_FirstMeetingRoom.hdrmaps_FirstMeetingRoom"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 0,
+    "Colors": {
+      "HighLightColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      },
+      "ShadowColor": {
+        "R": 0.040915,
+        "G": 0.287441,
+        "B": 0.467784,
+        "A": 1.0,
+        "Hex": "FF3992B6"
+      },
+      "BumpOffset_Color": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      },
+      "EmissiveColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      },
+      "PartEmissiveColor": {
+        "R": 2.0,
+        "G": 2.0,
+        "B": 2.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      },
+      "AddColor": {
+        "R": 0.0,
+        "G": 0.122139,
+        "B": 0.201556,
+        "A": 1.0,
+        "Hex": "FF00627C"
+      },
+      "BackLight_Color": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF000000"
+      },
+      "Reflection Color": {
+        "R": 0.898039,
+        "G": 0.909804,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFF4F5FF"
+      }
+    },
+    "Scalars": {
+      "HighLight_Offset_U": 0.0,
+      "HighLight_Offset_V": 0.0,
+      "Height": -0.5,
+      "fadeLength": 150.0,
+      "fadePower": 0.6,
+      "Emissive_Intensity": 2.0,
+      "FakeBackLighting_Intensity": 0.8,
+      "Is_Backlight": 0.0,
+      "SmoothStep_Min": 0.0,
+      "SmoothStep_Max": 0.6,
+      "BackLighting_Desaturation": 0.6,
+      "OpasityRange": 1.0,
+      "Intensity_Far": 0.0,
+      "Intensity_Near": 1.0,
+      "Rotation": 0.3,
+      "Contrast": 1.0,
+      "Offset_U": -0.042,
+      "Offset_V": 0.0,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "DitherMask": true,
+      "EyeBall_U_L_true_R_false": true,
+      "EyeBall_V_L_true_R_false": true,
+      "Is_FakeBackLighting": true,
+      "Is_FakeBackLightingUseMask": true,
+      "Is_PartEmissive": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

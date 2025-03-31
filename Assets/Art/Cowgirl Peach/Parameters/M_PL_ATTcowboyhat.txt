@@ -1,0 +1,68 @@
+{
+  "Textures": {
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_D.T_PL_ATTcowboyhat_D",
+    "BaseColorSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_D.T_PL_ATTcowboyhat_D",
+    "PM_Emissive": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_D.T_PL_ATTcowboyhat_D",
+    "EmissiveSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_D.T_PL_ATTcowboyhat_D",
+    "MaskSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_M.T_PL_ATTcowboyhat_M",
+    "T_PL_ATTcowboyhat_M": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_M.T_PL_ATTcowboyhat_M",
+    "RoughnessSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_S.T_PL_ATTcowboyhat_S",
+    "PM_SpecularMasks": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_S.T_PL_ATTcowboyhat_S",
+    "T_PL_ATTcowboyhat_S": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_S.T_PL_ATTcowboyhat_S",
+    "PM_Normals": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_N.T_PL_ATTcowboyhat_N",
+    "NormalMapSample": "PJ037/Content/Assets/Characters/Player/PLcowgirl/Textures/T_PL_ATTcowboyhat_N.T_PL_ATTcowboyhat_N"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 0,
+    "Colors": {
+      "EmissiveColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFFFF"
+      },
+      "BackLight_Color": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF000000"
+      }
+    },
+    "Scalars": {
+      "Emissive_Intensity": 0.2,
+      "Is_Backlight": 0.0,
+      "Is_Backlight_Buff": 0.0,
+      "MatCapIntensity": 0.0,
+      "Roughness": 1.2,
+      "SpecularColor": -0.8,
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "Is_ColoredSpecular": true,
+      "Is_FakeBackLighting": true,
+      "Is_FakeBackLightingUseMask": true,
+      "Is_FakeLighting": true,
+      "Is_FakeLightingHalfFresnel": true,
+      "Is_FakeLightingHemisphere": true,
+      "Is_FakeSpecular": true,
+      "Is_SpecularMask": true,
+      "Is_SpecularMaskDither": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}

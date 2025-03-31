@@ -1,0 +1,39 @@
+{
+  "Textures": {
+    "OcclusionMap": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_AO_D.T_PL_HIRcowgirlPony_AO_D",
+    "PM_Diffuse": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_AO_D.T_PL_HIRcowgirlPony_AO_D",
+    "T_PL_HIRcowgirlPony_AO_D": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_AO_D.T_PL_HIRcowgirlPony_AO_D",
+    "TangentUV0Main": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_F.T_PL_HIRcowgirlPony_F",
+    "T_PL_HIRcowgirlPony_F": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_F.T_PL_HIRcowgirlPony_F",
+    "TangentUV1Sub": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_F2.T_PL_HIRcowgirlPony_F2",
+    "T_PL_HIRcowgirlPony_F2": "PJ037/Content/Assets/Characters/Player/PL_HIR/PL_HIRcowgirlPony/Textures/T_PL_HIRcowgirlPony_F2.T_PL_HIRcowgirlPony_F2"
+  },
+  "Parameters": {
+    "BlendMode": 1,
+    "ShadingModel": 0,
+    "Colors": {},
+    "Scalars": {
+      "RefractionDepthBias": 0.0
+    },
+    "Switches": {
+      "Is_FakeBackLighting": true,
+      "Is_FakeLighting": true,
+      "Is_FakeLightingHalfFresnel": true,
+      "Is_FakeLightingHemisphere": true,
+      "UseSubFlowMap": true
+    },
+    "Properties": {
+      "bHasStaticPermutationResource": true,
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
+        "OpacityMaskClipValue": 0.3333
+      }
+    },
+    "HasTopDiffuse": false,
+    "HasTopNormals": false,
+    "HasTopSpecularMasks": false,
+    "HasTopEmissive": false,
+    "IsTranslucent": false,
+    "IsNull": false
+  }
+}
