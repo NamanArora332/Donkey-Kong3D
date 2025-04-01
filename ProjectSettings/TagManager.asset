@@ -12,6 +12,12 @@ TagManager:
   - Mario
   - FloorJumpPowerUp
   - Peach
+  - FxTemporaire
+  - Kong
+  - GameOverText
+  - Heart
+  - ScoreText
+  - TimerText
   layers:
   - Default
   - TransparentFX

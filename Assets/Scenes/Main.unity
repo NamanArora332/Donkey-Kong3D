@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 113909257}
   m_Layer: 5
   m_Name: GameOver
-  m_TagString: Untagged
+  m_TagString: GameOverText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 405566072}
   m_Layer: 5
   m_Name: Timer
-  m_TagString: Untagged
+  m_TagString: TimerText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2183,7 +2183,7 @@ GameObject:
   - component: {fileID: 842467631}
   m_Layer: 0
   m_Name: Donkey Kong
-  m_TagString: Untagged
+  m_TagString: Kong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3689,7 +3689,7 @@ GameObject:
   - component: {fileID: 1443687300}
   m_Layer: 5
   m_Name: Heart
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3833,7 +3833,7 @@ GameObject:
   - component: {fileID: 1492323989}
   m_Layer: 5
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4416,6 +4416,7 @@ MonoBehaviour:
   winClip: {fileID: 8300000, guid: e557ba6146b124ce0a16d1c4c55dacd4, type: 3}
   gameOverClip: {fileID: 8300000, guid: daac9b935ac344969b10596f8c016a30, type: 3}
   stageClearClip: {fileID: 8300000, guid: 1ccaaab075f5a452885d016e3dc08578, type: 3}
+  gameStartClip: {fileID: 8300000, guid: 3a19a7f1b88954c3188a75156216fec4, type: 3}
   pauseClip: {fileID: 8300000, guid: cc1b2ec68674644bc97718d621c276ba, type: 3}
   kongClip: {fileID: 8300000, guid: e4e998d4dc6ac47fe874c2b98c35eaa4, type: 3}
   climbClip: {fileID: 8300000, guid: 202c1fe239fbb4b5fae05c203e8bdcc7, type: 3}
@@ -4650,7 +4651,7 @@ GameObject:
   - component: {fileID: 1524192624}
   m_Layer: 5
   m_Name: Heart (2)
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5322,7 +5323,7 @@ GameObject:
   - component: {fileID: 1825440256}
   m_Layer: 5
   m_Name: Heart (1)
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

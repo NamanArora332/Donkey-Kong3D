@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip winClip;
     public AudioClip gameOverClip;
     public AudioClip stageClearClip; 
+    public AudioClip gameStartClip;
     public AudioClip pauseClip; 
 
     [Header("Sound Effects (SFX) - Mario Clips")]
@@ -39,6 +40,7 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); // Make AudioManager persistent across scenes
         }
         else{
             Destroy(gameObject);
@@ -48,25 +50,33 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         Debug.Log("Starting Ambient Sound: " + (ambientClip_Level1 != null ? "Clip Found" : "Clip Missing"));
-        PlayAmbientSound();
     }
     
-    public void PlayAmbientSound()
+    public void PlayAmbientSound(AudioClip clip)
     {
         if (ambienceSource == null)
         {
             Debug.LogError("AmbienceSource is NULL!");
             return;
         }
-        else if (ambientClip_Level1 == null)
+
+        if (clip == null)
         {
-            Debug.LogError("ambientClip_level1 is NULL!");
+            Debug.LogError("Ambient clip is NULL!");
             return;
         }
-        ambienceSource.clip = ambientClip_Level1;
+
+        ambienceSource.clip = clip;
         ambienceSource.loop = true;
         ambienceSource.Play();
-        Debug.Log("Ambient Sound Playing...");
+    }
+
+    public void StopAmbientSound()
+    {
+        if (ambienceSource != null && ambienceSource.isPlaying)
+        {
+            ambienceSource.Stop();
+        }
     }
 
     public void PlaySound(AudioClip clip)

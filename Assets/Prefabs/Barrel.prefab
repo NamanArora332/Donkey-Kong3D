@@ -164,7 +164,7 @@ MonoBehaviour:
   dropUpwardForce: 7
   equipped: 1
   minTimeBetweenActions: 2
-  maxTimeBetweenActions: 5
+  maxTimeBetweenActions: 3
   animator: {fileID: 0}
 --- !u!114 &-5683679013008223878
 MonoBehaviour:
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236e855d0c68f4b94b2c37452b889f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 8
   barrelHitEffect: {fileID: 198078263120581564, guid: f575565b2e852564f862f4c258ba4ec0, type: 3}
 --- !u!1001 &3279124733730430427
 PrefabInstance:

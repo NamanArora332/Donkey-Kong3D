@@ -5,7 +5,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using JetBrains.Annotations;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehavior<GameManager>
 {
@@ -35,10 +35,11 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     protected override void Awake()
     {
         base.Awake();
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(settingsMenu);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         inputManager.OnSettingsMenu.AddListener(ToggleSettingsMenu);
-        // the game starts with the settings menu disabled
         DisableSettingsMenu();
 
         InitializeGame(); 
@@ -172,6 +173,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     private IEnumerator GameOverSequence()
     {
         if (isGameOver) yield break; // Prevent multiple calls
+        Debug.Log("GameOverSequence triggered");
         isGameOver = true; // Set the flag to true
         PauseTimer();
 
@@ -186,19 +188,15 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // Show the Game Over UI
         gameOver.gameObject.SetActive(true);
 
-        // Wait for 1.5 seconds
-        yield return new WaitForSecondsRealtime(1.5f);
+        // Wait for 4 seconds
+        yield return new WaitForSecondsRealtime(4f);
 
         // Unfreeze time and transition to the main menu
         Time.timeScale = 1f;
 
         // Handle Next Scene
         Debug.Log("Back to Main Menu");
-        // SceneHandler.Instance.LoadMenuScene();
-
-        // TODO: Back to main menu
-        yield return new WaitForSeconds(3f);
-        QuitGame();
+        SceneHandler.instance.LoadMenuScene();
     }
 
     private void ToggleSettingsMenu()
@@ -226,6 +224,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
 
     public void DisableSettingsMenu()
     {
+        
+        AudioManager.instance.ambienceSource.Play();      
         Time.timeScale = 1f;
         settingsMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
@@ -292,26 +292,20 @@ public class GameManager : SingletonMonoBehavior<GameManager>
             yield return new WaitForSeconds(10f);
 
             if (SceneHandler.instance != null)
+            {
+                SceneHandler.instance.LoadMenuScene(); // load the main menu
+            }
+            else
+            {
+                Debug.LogError("SceneHandler instance not found");
+            }
+        }
+        else
         {
-
-            SceneHandler.instance.LoadWinScene();
-
-
+            Debug.LogError("Unexpected scene index: " + currentScene.buildIndex);
         }
-        else {
-            Debug.LogError("SceneHandler instance not found");
         
-        }
-    
-    
-    
-    
     }
-
-
-
-
-
 
     public void QuitGame()
     {
